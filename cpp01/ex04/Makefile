@@ -6,17 +6,17 @@
 #    By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/21 15:08:34 by lgillard          #+#    #+#              #
-#    Updated: 2023/03/24 15:34:27 by mirsella         ###   ########.fr        #
+#    Updated: 2023/03/24 15:33:55 by mirsella         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRCS = main.cpp
 OBJS = $(SRCS:.cpp=.o)
 DEPS = $(SRCS:.cpp=.d)
 
 CXX = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD
-NAME = humans
+NAME = sed
 
 all: $(NAME)
 

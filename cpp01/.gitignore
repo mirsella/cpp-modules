@@ -1,5 +1,7 @@
 *.o
 a.out
 *.d
-zombie
 *.log
+zombie
+humans
+sed
