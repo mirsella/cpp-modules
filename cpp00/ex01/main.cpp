@@ -6,7 +6,7 @@
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 15:08:16 by lgillard          #+#    #+#             */
-/*   Updated: 2023/03/24 10:56:16 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/03/24 17:25:06 by lgillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,8 @@ static int ask_user(std::string key, std::string *value)
 		if (ask_user(key, value))
 			return 1;
 	}
-	*value = str;
+	else
+		*value = str;
 	return 0;
 }
 
@@ -62,9 +63,9 @@ int	searchPhoneBook(PhoneBook pb, int printContacts)
 		while (i < pb.getNbContacts())
 		{
 			print_size(std::string(1, i + '0'), 10, 1);
-			print_size(pb.getContact(i).firstName, 10, 1);
-			print_size(pb.getContact(i).lastName, 10, 1);
-			print_size(pb.getContact(i).nickName, 10, 0);
+			print_size(pb.getContact(i).get_firstName(), 10, 1);
+			print_size(pb.getContact(i).get_lastName(), 10, 1);
+			print_size(pb.getContact(i).get_nickName(), 10, 0);
 			std::cout << std::endl;
 			i++;
 		}
