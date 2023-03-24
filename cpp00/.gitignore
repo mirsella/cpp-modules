@@ -1,0 +1,7 @@
+*.o
+a.out
+*.d
+megaphone
+phonebook
+account_tests
+*.log
