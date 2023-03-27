@@ -6,15 +6,15 @@
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 13:51:44 by lgillard          #+#    #+#             */
-/*   Updated: 2023/03/24 15:31:14 by lgillard         ###   ########.fr       */
+/*   Updated: 2023/03/27 14:17:54 by lgillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Weapon.hpp"
-
 #ifndef HUMANB_HPP
 #define HUMANB_HPP
+
+#include <iostream>
+#include "Weapon.hpp"
 
 class HumanB
 {
