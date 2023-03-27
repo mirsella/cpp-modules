@@ -6,7 +6,7 @@
 #    By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/21 15:08:34 by lgillard          #+#    #+#              #
-#    Updated: 2023/03/24 12:54:19 by mirsella         ###   ########.fr        #
+#    Updated: 2023/03/27 13:11:36 by mirsella         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ $(NAME): $(OBJS)
 	$(CXX) $(CFLAGS) -o $(NAME) $(OBJS)
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(DEPS)
 
 fclean: clean
 	rm -f $(NAME)

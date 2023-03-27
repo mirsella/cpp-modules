@@ -6,7 +6,7 @@
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 15:08:16 by lgillard          #+#    #+#             */
-/*   Updated: 2023/03/24 17:25:06 by lgillard         ###   ########.fr       */
+/*   Updated: 2023/03/27 13:44:16 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	searchPhoneBook(PhoneBook pb, int printContacts)
 		print_size("last name", 10, 1);
 		print_size("nickname", 10, 0);
 		std::cout << std::endl;
-		while (i < pb.getNbContacts())
+		while (i <= pb.getNbContacts())
 		{
 			print_size(std::string(1, i + '0'), 10, 1);
 			print_size(pb.getContact(i).get_firstName(), 10, 1);
@@ -74,7 +74,7 @@ int	searchPhoneBook(PhoneBook pb, int printContacts)
 	if (ask_user("the index for the contact", &input))
 		return 1;
 	index = std::atoi(input.c_str());
-	if (!std::isdigit(input[0]) || index >= pb.getNbContacts() || index < 0)
+	if (!std::isdigit(input[0]) || index > pb.getNbContacts() || index < 0)
 	{
 		std::cout << "Invalid index" << std::endl;
 		searchPhoneBook(pb, 0);

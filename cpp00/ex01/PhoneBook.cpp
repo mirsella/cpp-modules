@@ -6,7 +6,7 @@
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 16:34:09 by lgillard          #+#    #+#             */
-/*   Updated: 2023/03/24 17:18:47 by lgillard         ###   ########.fr       */
+/*   Updated: 2023/03/27 13:10:20 by lgillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int PhoneBook::newContact()
 {
 	if (_contacts[_nbContacts].fillContact())
 		return 1;
-	if (_nbContacts < 8)
+	if (_nbContacts < 7)
 		_nbContacts++;
 	return 0;
 }
