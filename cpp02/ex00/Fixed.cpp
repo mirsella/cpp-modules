@@ -6,7 +6,7 @@
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 14:26:17 by lgillard          #+#    #+#             */
-/*   Updated: 2023/03/27 14:57:21 by lgillard         ###   ########.fr       */
+/*   Updated: 2023/03/27 15:12:30 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ int	Fixed::getRawBits() const
 
 void	Fixed::setRawBits(int const raw)
 {
+	std::cout << "setRawBits member function called" << std::endl;
 	_value = raw;
 }
