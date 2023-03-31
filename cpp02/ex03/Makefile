@@ -3,20 +3,20 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+         #
+#    By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/03/21 15:08:20 by mirsella          #+#    #+#              #
-#    Updated: 2023/03/27 13:11:55 by lgillard         ###   ########.fr        #
+#    Created: 2023/03/21 15:08:34 by lgillard          #+#    #+#              #
+#    Updated: 2023/03/31 14:34:03 by mirsella         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = PhoneBook.cpp Contact.cpp main.cpp
+SRCS = main.cpp Fixed.cpp Point.cpp bsp.cpp
 OBJS = $(SRCS:.cpp=.o)
 DEPS = $(SRCS:.cpp=.d)
 
 CXX = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD
-NAME = phonebook
+NAME = fixed-point
 
 all: $(NAME)
 

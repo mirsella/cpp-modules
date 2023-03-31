@@ -6,7 +6,7 @@
 #    By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/21 15:08:34 by lgillard          #+#    #+#              #
-#    Updated: 2023/03/27 14:15:57 by mirsella         ###   ########.fr        #
+#    Updated: 2023/03/31 14:36:03 by mirsella         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ NAME = fixed-point
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CXX) $(CFLAGS) -o $(NAME) $(OBJS)
+	$(CXX) $(CPPFLAGS) -o $(NAME) $(OBJS)
 
 clean:
 	rm -f $(OBJS) $(DEPS)

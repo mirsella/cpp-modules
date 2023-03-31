@@ -21,7 +21,7 @@ NAME = megaphone
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CXX) $(CFLAGS) -o $(NAME) $(OBJS)
+	$(CXX) $(CPPFLAGS) -o $(NAME) $(OBJS)
 
 clean:
 	rm -f $(OBJS) $(DEPS)
