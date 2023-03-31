@@ -6,32 +6,31 @@
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 13:53:38 by lgillard          #+#    #+#             */
-/*   Updated: 2023/03/27 17:05:56 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/03/31 15:57:01 by lgillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Fixed.hpp"
+#include "Point.hpp"
+
+bool	bsp(const Point a, const Point b, const Point c, const Point point);
 
 int main( void ) {
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << "max: " << Fixed::max( a, b ) << std::endl;
-	std::cout << "min: " << Fixed::min( a, b ) << std::endl;
-	std::cout << "a < b: " << (a < b) << std::endl;
-	std::cout << "a <= b: " << (a <= b) << std::endl;
-	std::cout << "a > b: " << (a > b) << std::endl;
-	std::cout << "a >= b: " << (a >= b) << std::endl;
-	std::cout << "a == b: " << (a == b) << std::endl;
-	std::cout << "a != b: " << (a != b) << std::endl;
-	std::cout << "a + 2: " << (a + 2) << std::endl;
-	std::cout << "a - 2: " << (a - 2) << std::endl;
-	std::cout << "b / 2: " << (b / 2) << std::endl;
+	bool	result;
+
+	result = bsp(Point(1, 1), Point(4, 1), Point(2, 5), Point(3, 2));
+	std::cout << "is in the rectangle: " << result << std::endl;
+
+	result = bsp(Point(0, 0), Point(10, 30), Point(20, 0), Point(10, 15));
+	std::cout << "is in the rectangle: " << result << std::endl;
+
+	result = bsp(Point(0, 0), Point(10, 30), Point(20, 0), Point(30, 15));
+	std::cout << "is in the rectangle: " << result << std::endl;
+
+	result = bsp(Point(0, 0), Point(0, 0), Point(20, 0), Point(10, 15));
+	std::cout << "is in the rectangle: " << result << std::endl;
+
+	result = bsp(Point(0, 0), Point(10, 30), Point(20, 0), Point(0, 0));
+	std::cout << "is in the rectangle: " << result << std::endl;
 	return 0;
 }

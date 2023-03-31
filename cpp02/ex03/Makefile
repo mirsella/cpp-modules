@@ -6,7 +6,7 @@
 #    By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/21 15:08:34 by lgillard          #+#    #+#              #
-#    Updated: 2023/03/31 14:34:03 by mirsella         ###   ########.fr        #
+#    Updated: 2023/03/31 15:50:29 by lgillard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ DEPS = $(SRCS:.cpp=.d)
 
 CXX = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD
-NAME = fixed-point
+NAME = bsp
 
 all: $(NAME)
 
