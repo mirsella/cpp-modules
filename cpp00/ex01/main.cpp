@@ -6,7 +6,7 @@
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 15:08:16 by lgillard          #+#    #+#             */
-/*   Updated: 2023/03/27 13:44:16 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/03/31 12:09:47 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	print_size(std::string str, size_t size, int print_separator)
 
 int	searchPhoneBook(PhoneBook pb, int printContacts)
 {
-	int i = 0;
+	size_t i = 0;
 	std::string input;
 	int	index;
 
@@ -60,7 +60,7 @@ int	searchPhoneBook(PhoneBook pb, int printContacts)
 		print_size("last name", 10, 1);
 		print_size("nickname", 10, 0);
 		std::cout << std::endl;
-		while (i <= pb.getNbContacts())
+		while (i < pb.getNbContacts() && i < 8)
 		{
 			print_size(std::string(1, i + '0'), 10, 1);
 			print_size(pb.getContact(i).get_firstName(), 10, 1);
@@ -74,7 +74,7 @@ int	searchPhoneBook(PhoneBook pb, int printContacts)
 	if (ask_user("the index for the contact", &input))
 		return 1;
 	index = std::atoi(input.c_str());
-	if (!std::isdigit(input[0]) || index > pb.getNbContacts() || index < 0)
+	if (!std::isdigit(input[0]) || index < 0 || (size_t)index >= pb.getNbContacts())
 	{
 		std::cout << "Invalid index" << std::endl;
 		searchPhoneBook(pb, 0);

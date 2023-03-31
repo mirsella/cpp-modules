@@ -6,7 +6,7 @@
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 16:16:49 by lgillard          #+#    #+#             */
-/*   Updated: 2023/03/24 17:23:25 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/03/31 12:06:23 by lgillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ static int ask_user(std::string key, std::string *value)
 		if (ask_user(key, value))
 			return 1;
 	}
-	*value = str;
+	else
+		*value = str;
 	return 0;
 }
 
