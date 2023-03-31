@@ -6,7 +6,7 @@
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 15:34:53 by lgillard          #+#    #+#             */
-/*   Updated: 2023/03/24 17:04:18 by lgillard         ###   ########.fr       */
+/*   Updated: 2023/03/31 19:00:14 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	replace_files(std::fstream &in, std::fstream &out, std::string s1, std::str
 {
 	std::string buffer;
 
-	while (std::getline(in, buffer))
+	while (std::getline(in, buffer, '\n'))
 	{
 		out << replace_string(s1, s2, buffer) << std::endl;
 		if (in.eof())

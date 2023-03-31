@@ -6,7 +6,7 @@
 #    By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/21 15:08:34 by lgillard          #+#    #+#              #
-#    Updated: 2023/03/24 12:55:52 by mirsella         ###   ########.fr        #
+#    Updated: 2023/03/31 18:08:20 by mirsella         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,13 +15,13 @@ OBJS = $(SRCS:.cpp=.o)
 DEPS = $(SRCS:.cpp=.d)
 
 CXX = c++
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD
 NAME = zombie
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CXX) $(CPPFLAGS) -o $(NAME) $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 clean:
 	rm -f $(OBJS) $(DEPS)
