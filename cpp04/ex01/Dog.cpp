@@ -6,7 +6,7 @@
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 09:46:24 by lgillard          #+#    #+#             */
-/*   Updated: 2023/04/05 19:18:27 by lgillard         ###   ########.fr       */
+/*   Updated: 2023/04/05 19:22:42 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Dog::Dog()
 
 Dog::Dog(const Dog &dog)
 {
-	this->_brain = 0;
+	_brain = new Brain();
 	*this = dog;
 	std::cout << "Dog created from copy" << std::endl;
 }
@@ -33,10 +33,7 @@ Dog &Dog::operator=(const Dog &dog)
 {
 	if (this == &dog)
 		return *this;
-	if (this->_brain)
-		delete _brain;
 	_type = "Dog";
-	_brain = new Brain();
 	*_brain = *dog._brain;
 	std::cout << "Dog copied from assignment" << std::endl;
 	return *this;
