@@ -6,7 +6,7 @@
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:07:17 by lgillard          #+#    #+#             */
-/*   Updated: 2023/04/05 12:03:46 by lgillard         ###   ########.fr       */
+/*   Updated: 2023/04/05 12:49:20 by lgillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,19 @@ int main()
 
 	delete dog;
 	delete dog2;
+
+	Animal* animals[10];
+	for (size_t i = 0; i < 10; i++) {
+		if (i < 5)
+			animals[i] = new Cat();
+		else
+			animals[i] = new Dog();
+	}
+	for (size_t i = 0; i < 10; i++) {
+		animals[i]->makeSound();
+	}
+	for (size_t i = 0; i < 10; i++) {
+		delete animals[i];
+	}
 	return 0;
 }
