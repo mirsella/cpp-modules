@@ -6,7 +6,7 @@
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 09:46:24 by lgillard          #+#    #+#             */
-/*   Updated: 2023/04/05 11:53:50 by lgillard         ###   ########.fr       */
+/*   Updated: 2023/04/05 19:18:59 by lgillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,15 @@
 Cat::Cat()
 {
 	_type = "Cat";
+	_brain = new Brain();
+	if (!_brain)
+		std::cout << "failed to allocate Brain" << std::endl;
 	std::cout << "Cat created" << std::endl;
 }
 
 Cat::Cat(const Cat &cat)
 {
+	this->_brain = 0;
 	*this = cat;
 	std::cout << "Cat created from copy" << std::endl;
 }
@@ -40,6 +44,7 @@ Cat &Cat::operator=(const Cat &cat)
 
 Cat::~Cat()
 {
+	delete _brain;
 	std::cout << "Cat died" << std::endl;
 }
 
