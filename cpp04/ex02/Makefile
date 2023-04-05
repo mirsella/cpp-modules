@@ -6,7 +6,7 @@
 #    By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/21 15:08:34 by lgillard          #+#    #+#              #
-#    Updated: 2023/04/05 11:44:30 by lgillard         ###   ########.fr        #
+#    Updated: 2023/04/05 15:38:02 by lgillard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ OBJS = $(SRCS:.cpp=.o)
 DEPS = $(SRCS:.cpp=.d)
 
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -g3
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD
 NAME = animals
 
 all: $(NAME)
