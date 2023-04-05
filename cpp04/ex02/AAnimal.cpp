@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   AAnimal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,50 +10,50 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include <iostream>
 
-Animal::Animal()
+AAnimal::AAnimal()
 {
-	_type = "Default Animal";
-	std::cout << "Animal created with default type" << std::endl;
+	_type = "Default AAnimal";
+	std::cout << "AAnimal created with default type" << std::endl;
 }
 
-Animal::Animal(std::string type)
+AAnimal::AAnimal(std::string type)
 {
 	_type = type;
-	std::cout << "Animal created with type " + type << std::endl;
+	std::cout << "AAnimal created with type " + type << std::endl;
 }
 
-Animal::Animal(const Animal &animal)
+AAnimal::AAnimal(const AAnimal &animal)
 {
 	_type = animal._type;
-	std::cout << "Animal created with type " + _type + " by copy" << std::endl;
+	std::cout << "AAnimal created with type " + _type + " by copy" << std::endl;
 }
 
-Animal &Animal::operator=(const Animal &animal)
+AAnimal &AAnimal::operator=(const AAnimal &animal)
 {
 	_type = animal._type;
-	std::cout << "Animal created with type " + _type + " by assignment" << std::endl;
+	std::cout << "AAnimal created with type " + _type + " by assignment" << std::endl;
 	return *this;
 }
 
-Animal::~Animal()
+AAnimal::~AAnimal()
 {
-	std::cout << "Animal type " + _type + " died" << std::endl;
+	std::cout << "AAnimal type " + _type + " died" << std::endl;
 }
 
-std::string Animal::getType() const
+std::string AAnimal::getType() const
 {
 	return _type;
 }
 
-void	Animal::setType(std::string type)
+void	AAnimal::setType(std::string type)
 {
 	_type = type;
 }
 
-void	Animal::makeSound() const
+void	AAnimal::makeSound() const
 {
-	std::cout << "Animal default sound for type " + _type << std::endl;
+	std::cout << "AAnimal default sound for type " + _type << std::endl;
 }

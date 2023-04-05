@@ -6,20 +6,20 @@
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/03 16:07:17 by lgillard          #+#    #+#             */
-/*   Updated: 2023/04/05 13:06:53 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/04/05 13:09:17 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
 
 int main()
 {
-	/* Animal animal(); */
-	/* Animal animal("animal"); */
-	/* Animal animal(Cat()); */
+	/* AAnimal animal(); */
+	/* AAnimal animal("animal"); */
+	/* AAnimal animal(Cat()); */
 
 	Dog* dog = new Dog();
 	Dog* dog2;
@@ -38,7 +38,7 @@ int main()
 	delete dog;
 	delete dog2;
 
-	Animal* animals[10];
+	AAnimal* animals[10];
 	for (size_t i = 0; i < 10; i++) {
 		if (i < 5)
 			animals[i] = new Cat();

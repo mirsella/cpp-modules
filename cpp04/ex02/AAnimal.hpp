@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AAnimal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -15,14 +15,14 @@
 
 #include <string>
 
-class Animal
+class AAnimal
 {
 	public:
-		Animal();
-		Animal(std::string);
-		Animal(const Animal &);
-		Animal &operator=(const Animal &);
-		virtual ~Animal();
+		AAnimal();
+		AAnimal(std::string);
+		AAnimal(const AAnimal &);
+		AAnimal &operator=(const AAnimal &);
+		virtual ~AAnimal();
 
 		std::string 	getType() const;
 		void 			setType(std::string);
