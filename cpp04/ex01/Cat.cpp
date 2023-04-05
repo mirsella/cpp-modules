@@ -6,7 +6,7 @@
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 09:46:24 by lgillard          #+#    #+#             */
-/*   Updated: 2023/04/05 19:23:07 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/04/05 19:47:38 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ Cat::Cat()
 {
 	_type = "Cat";
 	_brain = new Brain();
-	if (!_brain)
-		std::cout << "failed to allocate Brain" << std::endl;
 	std::cout << "Cat created" << std::endl;
 }
 
