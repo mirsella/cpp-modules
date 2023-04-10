@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
+/*   Serializer.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/08 14:21:37 by mirsella          #+#    #+#             */
-/*   Updated: 2023/04/10 13:02:36 by mirsella         ###   ########.fr       */
+/*   Created: 2023/04/10 13:02:17 by mirsella          #+#    #+#             */
+/*   Updated: 2023/04/10 13:28:59 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
+#include "Data.hpp"
+#include <stdint.h>
 #include <string>
 
-class ScalarConverter
+class Serializer
 {
 	public:
-		ScalarConverter();
-		ScalarConverter(const ScalarConverter &scalarConverter);
-		ScalarConverter &operator=(const ScalarConverter &scalarConverter);
-		~ScalarConverter();
+		Serializer();
+		Serializer(Serializer const &);
+		Serializer &operator=(Serializer const &);
+		~Serializer();
 
-		static void	convert(const std::string input);
-		static std::string	getType(std::string input);
+		static uintptr_t serialize(Data* ptr);
+		static Data* deserialize(uintptr_t raw);
 };
