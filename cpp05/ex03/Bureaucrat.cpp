@@ -6,7 +6,7 @@
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 10:55:17 by lgillard          #+#    #+#             */
-/*   Updated: 2023/04/07 15:08:44 by lgillard         ###   ########.fr       */
+/*   Updated: 2023/04/11 23:05:05 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade): _name(name)
 	setGrade(grade);
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &src)
+Bureaucrat::Bureaucrat(const Bureaucrat &src): _name(src._name)
 {
 	*this = src;
 }
