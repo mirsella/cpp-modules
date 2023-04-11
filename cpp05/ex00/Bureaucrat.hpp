@@ -6,7 +6,7 @@
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 10:00:25 by lgillard          #+#    #+#             */
-/*   Updated: 2023/04/07 11:22:12 by lgillard         ###   ########.fr       */
+/*   Updated: 2023/04/11 22:48:51 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ class Bureaucrat
 		static const int kMinGrade = 150;
 		static const int kMaxGrade = 1;
 
-		std::string _name;
+		const std::string _name;
 		int			_grade;
 };
 

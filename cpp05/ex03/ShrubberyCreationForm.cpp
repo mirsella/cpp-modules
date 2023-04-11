@@ -6,11 +6,12 @@
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 14:44:26 by lgillard          #+#    #+#             */
-/*   Updated: 2023/04/07 15:33:19 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/04/11 22:50:51 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
+#include "AForm.hpp"
 #include <iostream>
 #include <fstream>
 
@@ -20,7 +21,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(): AForm("ShrubberyCreationForm", 1
 ShrubberyCreationForm::ShrubberyCreationForm(std::string const& target): AForm("ShrubberyCreationForm", 145, 137), _target(target)
 {}
 
-ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const& src)
+ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const& src): AForm("ShrubberyCreationForm", 145, 137)
 {
 	*this = src;
 }

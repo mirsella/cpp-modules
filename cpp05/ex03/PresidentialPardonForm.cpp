@@ -6,7 +6,7 @@
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 14:44:26 by lgillard          #+#    #+#             */
-/*   Updated: 2023/04/07 15:57:23 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/04/11 22:51:49 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ PresidentialPardonForm::PresidentialPardonForm(): AForm("PresidentialPardonForm"
 PresidentialPardonForm::PresidentialPardonForm(std::string const& target): AForm("PresidentialPardonForm", 25, 5), _target(target)
 {}
 
-PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const& src)
+PresidentialPardonForm::PresidentialPardonForm(PresidentialPardonForm const& src): AForm("PresidentialPardonForm", 25, 5)
 {
 	*this = src;
 }

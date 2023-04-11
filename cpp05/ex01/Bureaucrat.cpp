@@ -6,7 +6,7 @@
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 10:55:17 by lgillard          #+#    #+#             */
-/*   Updated: 2023/04/07 14:00:16 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/04/11 22:49:22 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &rhs)
 {
 	if (this == &rhs)
 		return *this;
-	_name = rhs._name;
 	_grade = rhs._grade;
 	return *this;
 }

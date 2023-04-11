@@ -6,7 +6,7 @@
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 14:44:26 by lgillard          #+#    #+#             */
-/*   Updated: 2023/04/07 15:53:39 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/04/11 22:51:38 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ RobotomyRequestForm::RobotomyRequestForm(): AForm("RobotomyRequestForm", 72, 45)
 RobotomyRequestForm::RobotomyRequestForm(std::string const& target): AForm("RobotomyRequestForm", 72, 45), _target(target)
 {}
 
-RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const& src)
+RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const& src): AForm("RobotomyRequestForm", 72, 45)
 {
 	*this = src;
 }
