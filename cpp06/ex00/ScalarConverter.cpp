@@ -6,16 +6,19 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/08 14:36:44 by mirsella          #+#    #+#             */
-/*   Updated: 2023/04/09 21:51:47 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/04/12 09:40:26 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
+#include <cstdio>
 #include <iostream>
 #include <string>
 #include <cstdlib>
 #include <cmath>
 #include <climits>
+#include <cerrno>
+#include <cstring>
 
 ScalarConverter::ScalarConverter() {}
 
@@ -34,18 +37,21 @@ std::string	ScalarConverter::getType(const std::string input)
 		return "char";
 	} else {
 		char* endptr = NULL;
+		errno = 0;
 		std::strtol(input.c_str(), &endptr, 0);
-		if (endptr == input.c_str() + input.length()) {
+		if (endptr == input.c_str() + input.length() && errno == 0) {
 			return "int";
 		} else {
 			endptr = NULL;
+			errno = 0;
 			std::strtof(input.c_str(), &endptr);
-			if ((endptr == input.c_str() + input.length()) || (endptr[0] == 'f' && endptr[1] == 0)) {
+			if (((endptr == input.c_str() + input.length()) || (endptr[0] == 'f' && endptr[1] == 0)) && errno == 0) {
 				return "float";
 			} else {
 				endptr = NULL;
+				errno = 0;
 				std::strtod(input.c_str(), &endptr);
-				if (endptr == input.c_str() + input.length()) {
+				if (endptr == input.c_str() + input.length() && errno == 0) {
 					return "double";
 				} else {
 					return "unknown";
@@ -135,5 +141,10 @@ void ScalarConverter::convert(const std::string input)
 		double d = std::strtod(input.c_str(), NULL);
 		printDouble(d);
 	} else
-		return (void)(std::cout << type << std::endl);
+	{
+		if (errno)
+			std::perror("Error");
+		else
+			std::cout << "type: " + type << std::endl;
+	}
 }
