@@ -6,7 +6,7 @@
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 10:00:04 by lgillard          #+#    #+#             */
-/*   Updated: 2023/04/10 13:33:35 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/04/12 09:46:39 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int main ()
 	std::cout << "Data2: " + data2->name + ", " << data2->age << std::endl;
 	std::cout << "data2 address: " << data2 << std::endl;
 	if (data1.name == data2->name && data1.age == data2->age)
-		std::cout << "✔️ Data's addresses are the same" << std::endl;
+		std::cout << "✔️  Data's addresses are the same" << std::endl;
 	else
 		std::cout << "❌ Data's addresses are not the same" << std::endl;
 }

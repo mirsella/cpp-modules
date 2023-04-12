@@ -1,17 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   C.hpp                                              :+:      :+:    :+:   */
+/*   Base.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
+/*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/10 13:43:05 by mirsella          #+#    #+#             */
-/*   Updated: 2023/04/12 11:08:50 by lgillard         ###   ########.fr       */
+/*   Created: 2023/04/12 09:58:32 by lgillard          #+#    #+#             */
+/*   Updated: 2023/04/12 09:59:09 by lgillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-
 #include "Base.hpp"
 
-class C: public Base {};
+Base::~Base() {}

@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/10 13:43:05 by mirsella          #+#    #+#             */
-/*   Updated: 2023/04/10 13:46:22 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/04/12 11:08:22 by lgillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,4 @@
 
 #include "Base.hpp"
 
-class A: public Base
-{
-	public:
-		~A();
-};
+class A: public Base {};
