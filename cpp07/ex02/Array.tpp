@@ -3,17 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   Array.tpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
+/*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 15:37:34 by lgillard          #+#    #+#             */
-/*   Updated: 2023/04/12 16:08:45 by lgillard         ###   ########.fr       */
+/*   Created: 2023/04/15 12:10:12 by mirsella          #+#    #+#             */
+/*   Updated: 2023/04/15 12:10:19 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#pragma once
-
-#include "Array.hpp"
-#include <exception>
 
 template <typename T>
 Array<T>::Array(): _array(new T[0]()), _size(0) {}

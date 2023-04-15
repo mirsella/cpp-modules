@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 14:39:25 by mirsella          #+#    #+#             */
-/*   Updated: 2023/04/12 15:53:31 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/04/15 12:10:27 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,5 @@ class Array
 		T *_array;
 		unsigned int _size;
 };
+
+#include "Array.tpp"
