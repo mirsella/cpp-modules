@@ -6,7 +6,7 @@
 /*   By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 14:30:52 by lgillard          #+#    #+#             */
-/*   Updated: 2023/04/17 14:55:08 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/04/17 15:16:38 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,7 @@
 #include <vector>
 
 class NotFoundException: public std::exception {
-	public:
-		const char* what() const throw() {
-			return "Not found";
-		}
+	public: virtual const char* what() const throw();
 };
 
 template <typename T>
