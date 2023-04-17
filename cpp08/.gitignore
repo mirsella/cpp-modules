@@ -1,0 +1,6 @@
+*.o
+*.d
+*.gch
+easyfind
+span
+stack
