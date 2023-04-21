@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 12:43:38 by mirsella          #+#    #+#             */
-/*   Updated: 2023/04/21 11:19:47 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/04/21 14:37:10 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main ()
 	mstack.push(5);
 	mstack.push(737);
 	//[...]
-	mstack.push(0);
+	mstack.push(-2);
 	MutantStack<int>::iterator it = mstack.begin();
 	MutantStack<int>::iterator ite = mstack.end();
 	++it;
@@ -37,8 +37,9 @@ int main ()
 		std::cout << *it << std::endl;
 		++it;
 	}
-	std::stack<int> s(mstack);
-
+	MutantStack<int> s(mstack);
+	std::cout << "copy stack size: " << s.size() << std::endl;
+	std::cout << s.top() << std::endl;
 
 	std::cout << std::endl << "list:" << std::endl;
 	std::list<int> list;
