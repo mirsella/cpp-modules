@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/12 12:43:38 by mirsella          #+#    #+#             */
-/*   Updated: 2023/04/18 17:52:10 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/04/21 11:08:44 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ int main ()
 	std::cout << "longest span is now: " << sp.longestSpan() << std::endl;
 
 
-	std::vector<int> v(10000);
-	for (int i = 0; i < 10000; ++i)
+	std::vector<int> v(20000);
+	for (unsigned int i = 0; i < v.size(); ++i)
 		v[i] = i;
 	try {
-		Span s(10000);
+		Span s(20000);
 		s.addRange(v.begin(), v.end());
 		std::cout << "shortest span: " << s.shortestSpan() << std::endl;
 		std::cout << "longest span : " << s.longestSpan() << std::endl;
