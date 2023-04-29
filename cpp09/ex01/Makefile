@@ -6,17 +6,17 @@
 #    By: lgillard <mirsella@protonmail.com>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/21 15:08:34 by lgillard          #+#    #+#              #
-#    Updated: 2023/04/29 11:26:36 by mirsella         ###   ########.fr        #
+#    Updated: 2023/04/29 11:26:22 by mirsella         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp BitcoinExchange.cpp
+SRCS = main.cpp RPN.cpp
 OBJS = $(SRCS:.cpp=.o)
 DEPS = $(SRCS:.cpp=.d)
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -MMD
-NAME = btc
+NAME = RPN
 
 all: $(NAME)
 

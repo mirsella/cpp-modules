@@ -1,6 +1,7 @@
 *.o
 *.d
 *.gch
+vgcore*
 btc
 RPN
 PmergeMe
